@@ -149,22 +149,3 @@ Among the evaluated models, ensemble-based approaches such as Random Forest gene
 * Deployment as a web-based or embedded system
 
 ---
-
-11. Project Structure
-
----
-electricity-theft-detection/
-│
-├── src/
-│   └── main.py
-│
-├── images/
-│   ├── correlation_matrix.png
-│   ├── scatter_plot.png
-│   ├── log_scale.png
-│   ├── confusion_matrix.png
-│   └── confusion_matrix_logic_regression.png
-│
-├── README.md
-└── requirements.txt
----
