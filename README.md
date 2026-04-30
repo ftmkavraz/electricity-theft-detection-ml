@@ -1,278 +1,170 @@
-\# Electricity Theft Detection Using Machine Learning
+Electricity Theft Detection Using Machine Learning
 
+1. Introduction
 
+Electricity theft represents a major challenge for energy distribution systems, leading to significant economic losses and operational inefficiencies. Detecting fraudulent consumption patterns is therefore critical for ensuring system reliability and sustainability.
 
-<p align="center">
+This project presents a machine learning-based approach for identifying electricity theft by analyzing consumption data and classifying users as fraudulent or non-fraudulent.
 
-&#x20; <img src="images/scatter\_plot.png" width="700"/>
+---
 
-</p>
+2. Objective
 
+The main objectives of this study are:
 
+* To identify abnormal electricity consumption patterns
+* To classify users based on fraudulent behavior
+* To evaluate the performance of different machine learning models
+* To improve classification performance through data preprocessing and balancing techniques
 
-\## 1. Introduction
+---
 
-Electricity theft is a significant issue in power distribution systems, leading to substantial financial losses and operational inefficiencies. Traditional detection methods are often insufficient due to the complexity and variability of consumption patterns.
+3. Dataset and Preprocessing
 
+3.1 Data Cleaning
 
+* Missing values were handled using median imputation
+* Duplicate records were removed
+* Irrelevant columns (e.g., unnamed indices) were dropped
 
-This project proposes a machine learning-based approach to detect electricity theft by analyzing consumption data and identifying anomalous patterns.
+3.2 Feature Engineering
 
+* Features (X) represent electricity consumption characteristics
+* Target variable (y) is defined as `IsStealer`
 
+3.3 Data Scaling
 
-\---
+* Standardization was applied using StandardScaler to normalize feature distributions
 
+3.4 Class Imbalance Handling
 
+* SMOTE (Synthetic Minority Oversampling Technique) was used to balance the dataset
 
-\## 2. Objective
+---
 
-The main objective of this project is to develop a predictive model capable of distinguishing between normal and fraudulent electricity consumption behaviors.
+4. Methodology
 
+Two machine learning models were implemented and compared:
 
+* Logistic Regression
+* Random Forest Classifier
 
-Specifically:
+The dataset was divided into training and testing sets, and both models were trained on the processed data.
 
-\- To preprocess and analyze electricity consumption data  
+---
 
-\- To extract meaningful features  
+5. Evaluation Metrics
 
-\- To train and evaluate machine learning models  
+The performance of the models was evaluated using the following metrics:
 
-\- To detect anomalies indicating potential electricity theft  
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* ROC-AUC
 
+---
 
+6. System Architecture
 
-\---
+The system follows a structured pipeline:
 
+1. Data Loading
+2. Data Preprocessing
+3. Feature Scaling
+4. Class Balancing (SMOTE)
+5. Model Training
+6. Model Evaluation
+7. Visualization of Results
 
+---
 
-\## 3. Dataset
+7. Results and Visualizations
 
-The dataset used in this project consists of electricity consumption records. Each record represents usage patterns over time.
+7.1 Correlation Matrix
 
-
-
-Data preprocessing steps include:
-
-\- Handling missing values  
-
-\- Normalization and scaling  
-
-\- Feature selection  
-
-
-
-(Note: Large datasets are not included due to GitHub file size limitations.)
-
-
-
-\---
-
-
-
-\## 4. Methodology
-
-
-
-\### 4.1 Data Preprocessing
-
-Raw data is cleaned and transformed into a suitable format for model training. This includes normalization and removal of outliers.
-
-
-
-\### 4.2 Feature Engineering
-
-Relevant features are extracted to improve model performance. These may include statistical measures such as mean, variance, and temporal consumption trends.
-
-
-
-\### 4.3 Model Development
-
-Machine learning algorithms are applied to classify consumption patterns. Models used:
-
-\- Logistic Regression  
-
-\- Random Forest  
-
-
-
-\### 4.4 Evaluation Metrics
-
-Model performance is evaluated using:
-
-\- Accuracy  
-
-\- Precision  
-
-\- Recall  
-
-\- F1-score  
-
-
-
-\---
-
-
-
-\## 5. Experimental Results and Visualization
-
-
-
-\### Correlation Matrix
-
-<p align="center">
-
-&#x20; <img src="images/correlation\_matrix.png" width="600"/>
-
-</p>
+![Correlation Matrix](images/correlation_matrix.png)
 
 The correlation matrix illustrates relationships between features and helps identify dependencies in the dataset.
 
+---
 
+7.2 Scatter Plot Analysis
 
-\---
-
-
-
-\### Scatter Plot Analysis
-
-<p align="center">
-
-&#x20; <img src="images/scatter\_plot.png" width="600"/>
-
-</p>
+![Scatter Plot](images/scatter_plot.png)
 
 Scatter plots provide insight into the distribution of data and potential separability between classes.
 
+---
 
+7.3 Log Scale Visualization
 
-\---
+![Log Scale](images/log_scale.png)
 
+Logarithmic scaling improves visualization of skewed data distributions.
 
+---
 
-\### Log Scale Visualization
+7.4 Confusion Matrix (Random Forest)
 
-<p align="center">
+![Confusion Matrix](images/confusion_matrix.png)
 
-&#x20; <img src="images/log\_scale.png" width="600"/>
+The confusion matrix presents classification performance by comparing predicted and actual labels.
 
-</p>
+---
 
-Log scaling improves visualization of skewed data distributions.
+7.5 Confusion Matrix (Logistic Regression)
 
+![Confusion Matrix Logistic Regression](images/confusion_matrix_logic_regression.png)
 
+This matrix shows the classification performance of the logistic regression model.
 
-\---
+---
 
+8. Technologies Used
 
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Imbalanced-learn (SMOTE)
 
-\### Confusion Matrix (General Model)
+---
 
-<p align="center">
+9. Conclusion
 
-&#x20; <img src="images/confusion\_matrix.png" width="500"/>
+This study demonstrates that machine learning techniques can effectively detect electricity theft by analyzing consumption patterns. The use of preprocessing, feature scaling, and class balancing significantly improves model performance.
 
-</p>
+Among the evaluated models, ensemble-based approaches such as Random Forest generally provide more robust results compared to linear models.
 
-The confusion matrix shows classification performance across predicted and actual labels.
+---
 
+10. Future Work
 
+* Integration with real-time monitoring systems
+* Use of deep learning models
+* Feature selection and optimization
+* Deployment as a web-based or embedded system
 
-\---
+---
 
+11. Project Structure
 
-
-\### Confusion Matrix (Logistic Regression)
-
-<p align="center">
-
-&#x20; <img src="images/confusion\_matrix\_logistic\_regression.png" width="500"/>
-
-</p>
-
-This matrix highlights the effectiveness of the Logistic Regression model in detecting electricity theft.
-
-
-
-\---
-
-
-
-\## 6. System Architecture
-
-The system follows a pipeline structure:
-
-
-
-1\. Data Collection  
-
-2\. Data Preprocessing  
-
-3\. Feature Extraction  
-
-4\. Model Training  
-
-5\. Prediction and Classification  
-
-
-
-\---
-
-
-
-\## 7. Conclusion
-
-This project demonstrates that machine learning provides an effective and scalable solution for detecting electricity theft. The models successfully identify abnormal consumption patterns and can be further improved with advanced techniques.
-
-
-
-Future work may include:
-
-\- Deep learning models  
-
-\- Real-time monitoring systems  
-
-\- Deployment as a web-based application  
-
-
-
-\---
-
-
-
-\## 8. Technologies Used
-
-\- Python  
-
-\- Pandas  
-
-\- NumPy  
-
-\- Scikit-learn  
-
-\- Matplotlib  
-
-\- Seaborn  
-
-
-
-\---
-
-
-
-\## 9. Author
-
-Fatıma Kavraz  
-
-Electrical and Electronics Engineering Student  
-
-
-
-\---
-
-
-
-\## 10. Notes
-
-This project is developed for educational and research purposes.
-
+---
+electricity-theft-detection/
+│
+├── src/
+│   └── main.py
+│
+├── images/
+│   ├── correlation_matrix.png
+│   ├── scatter_plot.png
+│   ├── log_scale.png
+│   ├── confusion_matrix.png
+│   └── confusion_matrix_logic_regression.png
+│
+├── README.md
+└── requirements.txt
+---
