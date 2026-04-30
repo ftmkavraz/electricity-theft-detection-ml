@@ -2,9 +2,17 @@
 
 
 
+<p align="center">
+
+&#x20; <img src="images/scatter\_plot.png" width="700"/>
+
+</p>
+
+
+
 \## 1. Introduction
 
-Electricity theft is a significant issue in power distribution systems, leading to substantial financial losses and operational inefficiencies. Traditional detection methods are often insufficient due to the complexity and variability of consumption patterns. 
+Electricity theft is a significant issue in power distribution systems, leading to substantial financial losses and operational inefficiencies. Traditional detection methods are often insufficient due to the complexity and variability of consumption patterns.
 
 
 
@@ -24,13 +32,13 @@ The main objective of this project is to develop a predictive model capable of d
 
 Specifically:
 
-\- To preprocess and analyze electricity consumption data
+\- To preprocess and analyze electricity consumption data  
 
-\- To extract meaningful features
+\- To extract meaningful features  
 
-\- To train and evaluate machine learning models
+\- To train and evaluate machine learning models  
 
-\- To detect anomalies indicating potential electricity theft
+\- To detect anomalies indicating potential electricity theft  
 
 
 
@@ -46,15 +54,15 @@ The dataset used in this project consists of electricity consumption records. Ea
 
 Data preprocessing steps include:
 
-\- Handling missing values
+\- Handling missing values  
 
-\- Normalization and scaling
+\- Normalization and scaling  
 
-\- Feature selection
+\- Feature selection  
 
 
 
-(Note: Due to GitHub file size limitations, large datasets are not included in this repository.)
+(Note: Large datasets are not included due to GitHub file size limitations.)
 
 
 
@@ -80,29 +88,25 @@ Relevant features are extracted to improve model performance. These may include 
 
 \### 4.3 Model Development
 
-Machine learning algorithms are applied to classify consumption patterns. Possible models include:
+Machine learning algorithms are applied to classify consumption patterns. Models used:
 
-\- Logistic Regression
+\- Logistic Regression  
 
-\- Decision Trees
-
-\- Random Forest
-
-\- Support Vector Machines
+\- Random Forest  
 
 
 
-\### 4.4 Evaluation
+\### 4.4 Evaluation Metrics
 
-Model performance is evaluated using standard metrics:
+Model performance is evaluated using:
 
-\- Accuracy
+\- Accuracy  
 
-\- Precision
+\- Precision  
 
-\- Recall
+\- Recall  
 
-\- F1-score
+\- F1-score  
 
 
 
@@ -110,7 +114,91 @@ Model performance is evaluated using standard metrics:
 
 
 
-\## 5. System Architecture
+\## 5. Experimental Results and Visualization
+
+
+
+\### Correlation Matrix
+
+<p align="center">
+
+&#x20; <img src="images/correlation\_matrix.png" width="600"/>
+
+</p>
+
+The correlation matrix illustrates relationships between features and helps identify dependencies in the dataset.
+
+
+
+\---
+
+
+
+\### Scatter Plot Analysis
+
+<p align="center">
+
+&#x20; <img src="images/scatter\_plot.png" width="600"/>
+
+</p>
+
+Scatter plots provide insight into the distribution of data and potential separability between classes.
+
+
+
+\---
+
+
+
+\### Log Scale Visualization
+
+<p align="center">
+
+&#x20; <img src="images/log\_scale.png" width="600"/>
+
+</p>
+
+Log scaling improves visualization of skewed data distributions.
+
+
+
+\---
+
+
+
+\### Confusion Matrix (General Model)
+
+<p align="center">
+
+&#x20; <img src="images/confusion\_matrix.png" width="500"/>
+
+</p>
+
+The confusion matrix shows classification performance across predicted and actual labels.
+
+
+
+\---
+
+
+
+\### Confusion Matrix (Logistic Regression)
+
+<p align="center">
+
+&#x20; <img src="images/confusion\_matrix\_logistic\_regression.png" width="500"/>
+
+</p>
+
+This matrix highlights the effectiveness of the Logistic Regression model in detecting electricity theft.
+
+
+
+\---
+
+
+
+\## 6. System Architecture
 
 The system follows a pipeline structure:
 
@@ -132,25 +220,19 @@ The system follows a pipeline structure:
 
 
 
-\## 6. Results
-
-The implemented model demonstrates the ability to detect abnormal consumption patterns with a reasonable level of accuracy. The results indicate that machine learning techniques can effectively support electricity theft detection systems.
-
-
-
-\---
-
-
-
 \## 7. Conclusion
 
-This project shows that machine learning provides a scalable and efficient solution for detecting electricity theft. Future improvements may include:
+This project demonstrates that machine learning provides an effective and scalable solution for detecting electricity theft. The models successfully identify abnormal consumption patterns and can be further improved with advanced techniques.
 
-\- Using deep learning models
 
-\- Real-time data integration
 
-\- Deployment as a web-based monitoring system
+Future work may include:
+
+\- Deep learning models  
+
+\- Real-time monitoring systems  
+
+\- Deployment as a web-based application  
 
 
 
@@ -160,15 +242,17 @@ This project shows that machine learning provides a scalable and efficient solut
 
 \## 8. Technologies Used
 
-\- Python
+\- Python  
 
-\- Pandas
+\- Pandas  
 
-\- NumPy
+\- NumPy  
 
-\- Scikit-learn
+\- Scikit-learn  
 
-\- Matplotlib
+\- Matplotlib  
+
+\- Seaborn  
 
 
 
@@ -180,7 +264,7 @@ This project shows that machine learning provides a scalable and efficient solut
 
 Fatıma Kavraz  
 
-Electrical and Electronics Engineering Student
+Electrical and Electronics Engineering Student  
 
 
 
